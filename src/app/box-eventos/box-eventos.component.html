@@ -1,0 +1,19 @@
+<section class="box-eventos">
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-3 col-lg-3 col-md-3 col-sm-4 col-12" *ngFor="let ev of events">
+                <div class="card card-events">
+                    <figure>
+                        <img src="{{ev.img}}" alt="{{ev.title}}" title="{{ev.title}}" /> 
+                    </figure>
+                    <div class="card-body">
+                        <div class="box-title">
+                            <h5 class="card-title">{{ev.title}}</h5>
+                        </div>
+                        <p class="card-text">{{ev.description}}</p>
+                    </div>
+                </div>                 
+            </div>
+        </div>
+    </div>
+</section>  

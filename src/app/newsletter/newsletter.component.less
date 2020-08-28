@@ -1,0 +1,157 @@
+@import '../../less/vars.less';    
+
+
+.box-newsletter {
+    padding: 89px 0;
+    .box-content {
+        background: #FFE2DC;
+        border-radius: 25px;
+        padding: 85px;
+        h2 {
+            font-family: @font02;
+            font-weight: bold;
+            margin: 0;
+        }
+        p {
+            font-weight: 600;
+            margin: 10px 0 25px;
+        }
+        form {
+            .box-input {
+                position: relative;  
+                &:before { 
+                    content: url(../../assets/img/icon-mail.jpg);
+                    position: absolute;
+                    top: 19px;
+                    left: 27px; 
+                    width: auto;
+                }
+                input {
+                    width: 100%;
+                    height: 58px;
+                    border: none;
+                    border-radius: 13px;
+                    transition: 0.6s;
+                    border: 1px solid transparent;   
+                    padding: 0 55px;
+                    font-size: 13px;
+                    &:focus {
+                        outline: 0;
+                        transition: 0.6s;
+                    }
+                }
+                button {
+                    position: absolute;
+                    right: 15px;
+                    top: 11px;
+                    background: @color-primary;
+                    border: none;
+                    width: 38px;
+                    height: 38px;
+                    border: 1px solid @color-primary; 
+                    box-shadow: 5px 10px 30px #E76F5166;
+                    border-radius: 16px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center; 
+                    transition: 0.6s;
+                    border: none;
+                    &:focus {
+                        outline: 0;
+                        border: none;
+                    }
+                    &:hover {
+                        transition: 0.6s; 
+                        background: #eae9e9;
+                        border: none;
+                    }
+                    i, svg {
+                        color: @branco;
+                        transform: rotate(70deg);
+                    }
+                }
+            }
+            
+        }
+        .box-image {
+            display: flex;
+            justify-content: flex-end;
+            img {
+               max-width: 100%;
+               height: auto;
+            }
+        }
+    }
+}
+
+
+
+@media(max-width: 1201px) {
+
+    .box-newsletter {
+        .box-content {
+            padding: 50px;
+        }
+    }
+
+}
+
+
+@media(max-width: 991px) {
+
+    .box-newsletter {
+        .box-content {
+            h2 {
+                font-size: 23px;
+            }
+            p {
+                font-size: 14px;
+            }
+
+            input {
+                height: 45px;
+            }
+        }
+    }
+}
+
+
+ 
+@media(max-width: 767px) {
+
+    .box-newsletter {   
+        .box-content {
+            padding: 40px 25px;
+            .reverse-mobile {
+                display: flex;
+                flex-direction: column-reverse;
+                .box-image {
+                    justify-content: center;
+                }
+            }
+            h2 {
+                font-size: 41px;
+                text-align: center;
+                margin: 25px 0 15px; 
+            }
+            p {
+                font-size: 14px;
+                text-align: center;
+                font-weight: bold;
+            }
+
+            input {
+                height: 45px;
+            }
+        }
+    }
+}
+
+
+@media(max-width: 480px) {
+
+    .box-newsletter {  
+        padding: 0 0 89px;   
+    }
+}
+

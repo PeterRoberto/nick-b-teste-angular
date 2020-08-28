@@ -1,0 +1,117 @@
+@import '../../less/vars.less';    
+
+.box-eventos {
+    position: relative;
+    top: -100px;
+
+    .card-events {
+        border-radius: 20px;
+        padding: 40px 20px;
+        figure {
+            width: 82px;
+            height: 82px;
+            margin: auto;
+            img {
+                width: auto;
+                margin: auto;
+                object-fit: none;
+            }
+        }
+        .card-body {
+            text-align: center;
+            padding: 0;
+            h5 {
+                font-weight: 900;
+                font-family: @font02;
+                font-size: 15px;
+                margin: 10px 0;
+            }
+            p {
+                font-size: 14px;
+                color: @preto;
+                font-weight: 600;
+                font-family: @font01;
+            }
+        }
+    }
+}
+
+
+
+@media(max-width: 1201px) {
+    .box-eventos {
+        .card-events {
+            padding: 20px 15px;
+            figure {
+                width: 75px;
+                height: 75px;
+                img {
+                    max-width: 100%;
+                    max-height: 100%;
+                    object-fit: cover;
+                }
+            }
+        }
+    }
+}
+
+
+
+@media(max-width: 991px) {
+    .box-eventos {
+        .card-events {
+            padding: 15px;
+            figure {
+                width: 40px;
+                height: 40px;
+                img {
+                    max-width: 100%;
+                    max-height: 100%;
+                    object-fit: cover;
+                }
+            }
+            .card-body {
+                text-align: center;
+                padding: 0;
+                .box-title {
+                    height: 40px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    h5 {
+                        line-height: 14px; 
+                    }
+                }
+                
+                p {
+                    font-size: 12px;
+                    line-height: 15px;
+                }
+            }
+        }
+    }
+}
+
+
+@media(max-width: 768px) {
+    .box-eventos {
+        .card-events {
+            margin-bottom: 15px;
+        }
+    }
+}
+
+
+@media(max-width: 480px) {
+    .box-eventos {
+        top: -160px;
+        .card-events {
+            padding: 45px;
+            margin-bottom: 30px;
+            figure {
+                width: 60px;
+                height: 60px;
+            }
+        }
+    }
+}

@@ -1,0 +1,194 @@
+@import '../../less/vars.less';    
+
+
+.box-destinos {
+    margin: 30px 0 0;
+
+    .icon-title {
+        figure {
+            background: @color-primary;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            margin: auto;
+            position: relative;
+            img {
+                position: absolute;
+                max-width: 63px;
+                top: -9px;
+                left: -6px;
+                z-index: 2;
+            }
+        }
+        h2 {
+            font-family: @font02; 
+            text-transform: capitalize;
+            text-align: center;
+            max-width: 290px;
+            margin: 35px auto 50px;
+            font-weight: 700;
+        }
+    }
+
+
+    .card-destino {
+        padding: 25px;
+        border-radius: 25px;
+        margin-bottom: 25px;
+        figure {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 25px;
+            position: relative;
+            margin: 0;
+            img {
+                border-radius: 15px;
+                max-width: 100%;
+                max-height: 100%;
+                margin: 0 auto;
+            }
+            .price {
+                position: absolute;
+                bottom: -24px;
+                z-index: 2;
+                width: 135px;
+                height: 50px;
+                background: @branco;
+                border-top-right-radius: 14px;
+                border-top-left-radius: 14px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                p {
+                    color: @color-primary;
+                    font-weight: 700;
+                    font-size: 14px;
+                    margin: 0;
+                }
+            }
+            .like {
+                cursor: pointer;
+                text-decoration: none;
+                position: absolute;
+                top: 8px;
+                right: 11px;
+                width: 35px;
+                height: 35px;
+                background: @branco;
+                border-radius: 14px;
+                display: flex;
+                justify-content: center;
+                align-content: center;  
+                .fa-heart.far, .fa-heart.fas {
+                    color: @color-primary;
+                    height: 23px;
+                    margin: 7px 0 0;
+                    font-size: 20px;
+                }
+            }
+        }
+        .card-body {
+            padding: 0;
+            text-align: center;
+            h5 {
+                font-weight: 900;
+                font-family: @font02;
+                font-size: 15px;
+                margin: 25px 0 10px;
+            }
+            p {
+                font-size: 14px;
+                color: @preto;
+                font-weight: 600;
+                font-family: @font01;
+            }
+            .btn-view { 
+                .btn02;
+            }
+        }
+    }
+
+    .btn-more {
+        .btn02;
+        max-width: 15%;
+        text-align: center;
+        background: transparent;
+        border: 1px solid @color-primary;
+        color: @color-primary;
+        font-weight: 700; 
+        margin: 30px auto 0;
+    }
+}
+
+
+
+@media(max-width: 1201px) {
+
+
+    .box-destinos {
+        .card-destino {
+            padding: 10px;
+            border-radius: 25px;
+            margin-bottom: 25px; 
+            figure {
+                .price {
+                    height: 40px;
+                }
+            }
+            .card-body { 
+                h5 {
+                    font-size: 14px;
+                }
+                .btn-view { 
+                    padding: 6px 10px;
+                }
+            }
+        }
+    }
+}
+
+@media(max-width: 768px) {
+
+    .box-destinos {
+        margin: 0;
+        .btn-more {
+            max-width: 30%;
+        }
+    }
+
+}
+
+
+
+@media(max-width: 480px) {
+
+    .box-destinos {
+        margin: 0;
+        position: relative;
+        top: -100px;
+        .card-destino {
+            padding: 40px 48px;
+            figure {
+                .price {
+                    height: 40px;
+                }
+            }
+            .card-body { 
+                h5 {
+                    font-size: 14px;
+                }
+                .btn-view { 
+                    padding: 15px 10px;
+                }
+            }
+        }
+        .btn-more {
+            max-width: 45%;
+        }
+    }
+
+}
+
+

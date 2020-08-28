@@ -1,0 +1,47 @@
+<section class="box-destinos">
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-12 icon-title">
+                <figure>
+                    <img src="../../assets/img/icon-top-destinos.png" alt="Ícone destinos" title="Ícone destinos" />
+                </figure>
+                <h2>Explorar destinos &amp; Atividades</h2>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6 col-12" *ngFor="let dest of destiny">
+                <div class="card card-destino">
+                    <figure>
+                        <img src="{{dest.img}}" alt="{{dest.title}}" title="{{dest.title}}" /> 
+                        <div class="price">
+                            <p>{{dest.price}}</p>
+                        </div>
+                        <span class="like">
+                            <i class="fa-heart" 
+                                [ngClass]="{ 
+                                    'far': !meuFavorito,
+                                    'fas': meuFavorito 
+                                }"
+                                (click)="onClick()">
+                            </i> 
+                            <!-- <i class="fa-heart"></i> -->
+
+                            <!-- class="btn" [ngClass]="{ 'btn-default': isTrue, 'btn-primary': !isTrue}" -->
+                        </span>
+                    </figure>
+                    <div class="card-body">
+                        <h5 class="card-title">{{dest.title}}</h5>
+                        <p class="card-text">{{dest.description}}</p>
+                        <a href="#" class="btn-view">Visualizar</a>
+                    </div>
+                </div>                 
+            </div>  
+        </div>
+        <div class="row">
+            <div class="col-xl-12">
+                <a href="#" class="btn-more">Ver mais</a>
+            </div>
+        </div>
+    </div>
+</section>
