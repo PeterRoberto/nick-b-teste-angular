@@ -1,10 +1,11 @@
 @import '../../less/vars.less';   
 
-header {
+.box-menu {
     margin: 50px 0 0;
-    position: absolute;
+    position: fixed;
     width: 100%;
     z-index: 2;
+    transition: all 1s; 
     nav {
         padding: 0;
         .logo {
@@ -113,21 +114,19 @@ header {
                 }
             }
         }
-        
-    }
-    
+    } 
 }
 
 
 @media(max-width: 1201px) {
-    header {
+    .box-menu {
         nav {
             .menu-box { 
                 li {
                     margin-right: 22px;
                 }
                 .login-sign {
-                    margin-left: 0;
+                    margin-left: 0; 
                 }
             }
         } 
@@ -136,7 +135,7 @@ header {
 
 @media(max-width: 991px) {
 
-    header {
+    .box-menu {
         nav {
 
             .menu-box { 

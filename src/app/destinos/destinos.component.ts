@@ -28,7 +28,7 @@ export class DestinosComponent implements OnInit {
     {title: "Ninovan on the Shore", description: "Reserve experiências de acampamento únicas", img: "../../assets/img/dest12.png", price: "RS150/Noite"},
   ]
  
-
+ 
   onClick() {
     this.meuFavorito = !this.meuFavorito;
   }

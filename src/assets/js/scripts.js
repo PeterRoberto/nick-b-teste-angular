@@ -21,3 +21,31 @@ jQuery(document).ready(function($) {
   
 });
   
+ 
+
+
+
+(function() {  
+  'use strict';    
+
+  var boxHeader = document.querySelector('.box-menu');
+  window.addEventListener('scroll', setupNav);
+
+  function setupNav() {
+    var posYheight = getYscroll(); //  Recebe a função que faz a leitura do scroll.
+    if(posYheight > boxHeader && !hasClassFx()) {
+      document.body.classList.add('fx');
+    } 
+    if(posYheight <= boxHeader && hasClassFx()) {  
+      document.body.classList.remove('fx');
+    } 
+  }
+
+  function getYscroll () {
+    return window.pageYOffset;
+  }
+
+  function hasClassFx () {
+    return !!document.querySelector('.fx'); 
+  } 
+})();
